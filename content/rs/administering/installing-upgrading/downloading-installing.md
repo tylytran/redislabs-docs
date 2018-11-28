@@ -65,7 +65,7 @@ by performing the following steps:
     root user to run the install process.
 
     The -s switch is to tell install.sh to locate the Linux socket files
-    in /var/run/redislabs instead of the default, which is /tmp.
+    in /var/run/redislabs instead of the default, which is /var/opt/redislabs/run.
 
 1. During the installation process, enter the requested input each time
     you are prompted to do so.
