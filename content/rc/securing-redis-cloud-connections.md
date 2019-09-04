@@ -281,9 +281,16 @@ connect = host:port`
 
 ### Testing Secure Connectivity to a Redis Cloud Essentials Resource
 
-You can test the connection from your client using redis-cli, for
+You can test the connection from your client using redis-cli, through the default port 6379, for
 example::
 
 ```src
-redis-cli -h <hostname> -p <portnumber> PING
+redis-cli
 ```
+
+If you are using a different port number in your stunnel configuration file, then you need to specify the port number in your redis-cli connection:
+
+```src
+redis-cli -p <portnumber>
+```
+
