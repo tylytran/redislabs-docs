@@ -59,6 +59,8 @@ There are six options for persistence in Redis Enterprise Software:
 |  Snapshot every 6 hours | A snapshot of the database is created every 6 hours. |
 |  Snapshot every 12 hours | A snapshot of the database is created every 12 hours. |
 
+**Note that snapshot will be generated only if there was at least 1 write to the dataset.  If there was no change in the dataset, no snapshot will be generated even after the snapshot policy time had elapsed.**
+
 The first thing you need to do is determine if you even need
 persistence. Persistence is used to recover from a catastrophic failure,
 so make sure that you need to incur the overhead of persistence before
