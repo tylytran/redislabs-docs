@@ -113,8 +113,6 @@ a result:
     the database is unavailable during the restart because data is restored from the persistence file.
     The length of the downtime is different for each persistence option.
     For example, AOF usually takes longer than an RDB file.
-- For databases that have neither replication nor [persistence]({{< relref "/rs/concepts/data-access/persistence.md" >}})
-    enabled, the database loses all its data after it is restarted.
 
 ## Upgrading CRDBs
 
