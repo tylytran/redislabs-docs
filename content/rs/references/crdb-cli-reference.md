@@ -162,6 +162,7 @@ The syntax for the command is:
 ```sh
 crdb-cli crdb update --crdb-guid <crdb-guid> /
 [--no-wait] /
+[--default-db-config <Default database configuration options>]
 [--db-config-json <file_content>] /
 [--db-config-json-file <filename>] /
 [--compression (0-6)] /
