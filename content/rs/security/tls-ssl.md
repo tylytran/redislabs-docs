@@ -47,13 +47,14 @@ You cannot enable or disable TLS after the Active-Active database is created, bu
 ### Configure TLS certificates for Active-Active
 
 1. During database creation (see [Create an Active-Active Geo-Replicated Database]({{<relref "content/rs/administering/creating-databases/create-active-active.md" >}}), select **Edit** from the **configuration** tab.
-1. Enable **TLS**.
+1. Enable **TLS**.  <TLY: It is not possible to enable TLS via the UI for CRDB.  It has to be done from crdb-cli command>
     - **Enforce client authentication** is selected by default. If you unselect this option, you will still enforce encryption, but TLS client authentication will be disabled.
+    <TLY: The default **Require TLS for CRDB communication only** option does not have the Enforce client authentication option. This is only available for ReplicaOf, not CRDB/Active-Active>
 1. Select **Require TLS for CRDB communication only** from the dropdown menu.
-    ![crdb-tls-all](/images/rs/crdb-tls-all.png "crdb-tls-all")
+    ![crdb-tls-all](/images/rs/crdb-tls-all.png "crdb-tls-all")  
 1. Select **Add** ![Add](/images/rs/icon_add.png#no-click "Add")
 1. Paste a syncer certificate into the text box.
-    ![database-tls-replica-certs](/images/rs/database-tls-replica-certs.png "Database TLS Configuration")
+    ![database-tls-replica-certs](/images/rs/database-tls-replica-certs.png "Database TLS Configuration")  <TLY: this screenshot is for ReplicaOnly DB, not CRDB>
 1. Save the syncer certificate. ![icon_save](/images/rs/icon_save.png#no-click "Save")
 1. Repeat this process, adding the syncer certificate for each participating cluster.
 1. Optional: If also you want to require TLS for client connections, select **Require TLS for All Communications** from the dropdown and add client certificates as well.
